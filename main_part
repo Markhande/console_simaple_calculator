@@ -1,0 +1,22 @@
+import java.util.Objects;
+import java.util.Scanner;
+class main{
+    public static void main(String[] args) {
+        String ask;
+        do{
+            System.out.println("Welcome to calcu.web");
+            Scanner scan = new Scanner(System.in);
+            System.out.print("enter your first number: ");
+            int num1 = scan.nextInt();
+            System.out.print("enter your second number: ");
+            int num2 = scan.nextInt();
+            System.out.print("choose your operator (+,-,*,/): ");
+            String choose = scan.next();
+
+            calculator ab = new calculator();
+            ab.cal(num1, num2, choose);
+            System.out.println("Do you want to continue");
+            ask=scan.next();
+        }while (ask.equals("y")|| ask.equals("Y"));
+    }
+}
